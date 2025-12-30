@@ -3,7 +3,7 @@ package com.demo;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-public class CalculatorTest {
+public class CalculatorAddonTest {
 
     @Test
     public void testAddShouldFail() {
