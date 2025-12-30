@@ -13,6 +13,10 @@
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
+        <sonar.projectKey>dummy-jenkins-demo</sonar.projectKey>
+        <sonar.projectName>Dummy Jenkins Demo</sonar.projectName>
+        <sonar.host.url>http://localhost:9000</sonar.host.url>
+
     </properties>
 
     <dependencies>
