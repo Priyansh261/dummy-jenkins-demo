@@ -9,16 +9,16 @@
     <artifactId>dummy-jenkins-demo</artifactId>
     <version>1.0</version>
 
-    <!-- Properties -->
+    <!-- ✅ PROPERTIES YAHAN AAYEGA (NOT inside build) -->
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <sonar.projectKey>dummy-jenkins-demo</sonar.projectKey>
         <sonar.projectName>Dummy Jenkins Demo</sonar.projectName>
         <sonar.host.url>http://localhost:9000</sonar.host.url>
+
     </properties>
 
-    <!-- Dependencies -->
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -28,36 +28,23 @@
         </dependency>
     </dependencies>
 
-    <!-- Build plugins -->
     <build>
         <plugins>
 
-            <!-- Maven Compiler Plugin -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version>
-                <configuration>
-                    <source>${maven.compiler.source}</source>
-                    <target>${maven.compiler.target}</target>
-                </configuration>
-            </plugin>
-
-            <!-- Surefire Plugin for JUnit -->
+            <!-- JUnit -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0</version>
             </plugin>
 
-            <!-- JaCoCo for Code Coverage -->
+            <!-- JaCoCo -->
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.8</version>
                 <executions>
                     <execution>
-                        <id>prepare-agent</id>
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
@@ -72,14 +59,9 @@
                 </executions>
             </plugin>
 
-            <!-- SonarQube Maven Plugin -->
-            <plugin>
-                <groupId>org.sonarsource.scanner.maven</groupId>
-                <artifactId>sonar-maven-plugin</artifactId>
-                <version>3.11.0.3001</version>
-            </plugin>
-
         </plugins>
+
+         
     </build>
 
 </project>
